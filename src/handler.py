@@ -47,7 +47,7 @@ class MNISTDigitClassifier(object):
         self.model.to(device=self.device)
         self.model.eval()
 
-        logger.debug("Model file {} loaded successfully".format(model_pt_path)))
+        logger.debug("Model file {} loaded successfully".format(model_pt_path))
         self.initialized = True
     
     def preprocess(self, data):
@@ -85,8 +85,6 @@ class MNISTDigitClassifier(object):
     def postprocess(self, inference_output):
         return inference_output
 
-_service = MNISTDigitClassifier()
-
 def handle(data, context):
     if not _service.initialized:
         _service.initialize(context)
@@ -100,4 +98,5 @@ def handle(data, context):
 
     return data
 
-
+if __name__ == "__main__":
+    service = MNISTDigitClassifier()

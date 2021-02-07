@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "C:\\ProgramData\\Miniconda3\\envs\\dl_torch\\python.exe",
+    "python.pythonPath": "/home/oke/miniconda3/envs/dl_tflow/bin/python",
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": true
